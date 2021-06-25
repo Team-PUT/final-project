@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# Project Prep # 1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Group Members:
+- Jona Brown
+- Shan Jiang
+- Q Hashi
+- Alex Vogt
+## What are the key strengths of each person on the team?
 
-## Available Scripts
+### Alex
+CSS/Bootstrap: 9/10
+Front end JS - 6/10
+Back end JS - 8/10
 
-In the project directory, you can run:
+### Q
+css/Bootstrap - 6/10
+Front end JS - 8/10
+Back end JS - 5/10
 
-### `yarn start`
+### Shan 
+css/Bootstrap - 6/10
+Front end JS - 5/10
+Back end JS - 6/10
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Jona
+css/Bootstrap - 7/10
+Front end JS - 8/10
+Back end JS - 9/10
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### How can you best utilize these strengths? In which professional competencies do you each want to develop greater strength?
+- Dividing projects based off of our strengths in each area.
+- For professional competencies, we can divide up our strengths to suit each member of the team.
+If someone is struggling with a specific topic, or want to learn more about one - pair them with a member in
+the group who is confident in the topic.
 
-### `yarn test`
+### Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?0
+- team meetups, meeting back up throughout the day.
+  - 9AM: Morning Meetup
+  - 1PM: Optional check-in
+  - 5PM: evening check-in PUSH PARTY!!!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Conflict Plan
 
-### `yarn build`
+### What will be your group’s process to resolve conflict, when it arises? 
+- discuss with team member about particular disagreement. 
+``` js 
+if (disagreement !== resolved) {
+    discuss in group and vote on matter at hand;
+    discuss overall outcome with group as well;
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### What will your team do if one person is taking over the project and not letting the other members contribute?
+- refer to problem #1 of conflict plan. Group intervention!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How will you approach each other and the challenges of the project knowing that it is impossible for all members to be at the exact same place in understanding and skill level?
+- Treat each challenge with respect to the other member. We will also be working in groups of 2,
+with each member having differing strengths and weaknesses to balance out the workload.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### How will you raise concerns to members who are not adequately contributing?
+- Refer to problem #1 again, and ask questions to see if we can help rather than be accusatory.
 
-### `yarn eject`
+### How and when will you escalate the conflict if your resolution attempts are unsuccessful?
+- Go to instructor about the issue and explain. Have all group members present.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Communication plan
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What hours will you be available to communicate? How will you communicate after hours and on the weekend?
+- between 9AM - 6PM
+- For after hours/weekends, reach out on slack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What platforms will you use to communicate (ie. Slack, phone …)?
+- Slack will be main source of communication.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### How often will you take breaks?
+- When you need to. 
+- Communicate with your navigator/driver about break times.
 
-## Learn More
+### What is your plan if you start to fall behind?
+- Accept that it will not work at times. 
+- Step back and look at what is left to do and go back to basics.
+- Bring up issues earlier in the problem rather than waiting until end of day.
+- Don't be afraid to take a break on the specific problem.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What is your strategy for ensuring everyone’s voice is heard?
+- Meetings in morning and evening to address all concerns from everyone.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### How will you ensure that you are creating a safe environment where everyone feels comfortable speaking up?
+- Encourage team members to share their ideas
+- Have a helpful mindset, attempt to not be negative with your outlook, and work as a team.
 
-### Code Splitting
+### How you will identify tasks, assign tasks, know when they are complete, and manage work in general?
+- Keeping accountability through Trello will be the primary manner of communication with work. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### What project management tool will be used?
+- Trello
+- Slack
 
-### Analyzing the Bundle Size
+# Git Process
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### What components of your project will live on GitHub
+- Everything but project management tool, all of it!!
 
-### Making a Progressive Web App
+### What is your Git flow?
+- Everybody will clone staging repo.
+- Everyone will checkout a new branch of the staging repo.
+- At EOD, all will push to github, attempt to merge, resolve conflicts if any, make sure to PULL at EOD.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### How often will you merge?
+- every day at the evening meet-up.
 
-### Advanced Configuration
+### How will you communicate that it’s time to merge?
+- Have a set time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Who merges PRs? 
+Anyone, as we will all be in group together.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
