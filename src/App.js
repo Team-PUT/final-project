@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import FormPage from './FormPage';
+// import HomePage from './HomePage';
+import Footer from './Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <h1> Sous Chef </h1>
+      <FormPage />
+      <Footer />
+    </>
+  ) 
 }
 
 export default App;
