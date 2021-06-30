@@ -1,15 +1,17 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import NavBarClass from './NavBarClass';
+import NavbarClass from './NavbarClass';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 
 class AboutUs extends React.Component {
   render () {
     return (
       <>
-        <NavBarClass/>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+        <NavbarClass/>
+      <CardGroup>
+        <Card style={{ width: '18rem' }} variant="dark">
+          <Card.Img variant="top" src="" />
           <Card.Body>
             <Card.Title>Qaalid Hashi</Card.Title>
             <Card.Text>
@@ -20,7 +22,7 @@ class AboutUs extends React.Component {
         </Card>
 
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img variant="top" src="./picture/jonaImg.jpg"/>
           <Card.Body>
             <Card.Title>Jona Brown</Card.Title>
             <Card.Text>
@@ -42,7 +44,7 @@ class AboutUs extends React.Component {
         </Card>
 
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="picture/shanImg.jpg" />
+          <Card.Img variant="top" src="./picture/shanImg.jpg" />
           <Card.Body>
             <Card.Title>Shan Jiang</Card.Title>
             <Card.Text>
@@ -50,6 +52,7 @@ class AboutUs extends React.Component {
             </Card.Text>
           </Card.Body>
         </Card>
+      </CardGroup>
       </>
     )
   }
