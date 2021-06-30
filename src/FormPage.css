@@ -1,0 +1,13 @@
+
+
+.cardDeck {
+  /* border: red 5px solid; */
+  display: inline-flex;
+  /* max-width: 3em; */
+  max-height: 480px;
+}
+
+.recipe {
+  /* flex: 1; */
+  max-width: 3em;
+}
