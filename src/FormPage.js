@@ -4,6 +4,8 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import Toast from 'react-bootstrap/Toast';
 import RecipeCard from './RecipeCard.js';
+import CardDeck from 'react-bootstrap/CardDeck';
+import './FormPage.css';
 
 const REACT_APP_PORT = process.env.REACT_APP_PORT;
 
@@ -28,7 +30,7 @@ handleGetRecipes = async () => {
   let searchData = this.state.ingredients.join(' ');
   console.log(searchData);
   let recipeData = await axios.get(`${REACT_APP_PORT}/searchIngredients?ingredients=${searchData}`);
-    let dataToSave = recipeData.data.slice(0,20);
+    let dataToSave = recipeData.data.slice(0,15);
     console.log(recipeData);
     this.setState({recipes: dataToSave})
 }
@@ -76,8 +78,12 @@ handleGetRecipes = async () => {
           if(item.length > 0) {return <Toast key={idx} onClose = {() => this.toggleShow(idx)}><Toast.Header>{item}</Toast.Header></Toast>}else{return ''};
         }): ''}
         </div>
+        <div>
         {this.state.ingredients.length > 0 ? <Button onClick={this.handleGetRecipes}>Get Recipes!</Button> : ''}
-        {this.state.recipes.length > 0 ? <RecipeCard recipeData = {this.state.recipes[0]} /> : ''}
+        </div>
+        {this.state.recipes.length > 0 ? this.state.recipes.map((recipe, idx) => {
+          console.log(recipe);
+          return <CardDeck class = 'cardDeck'><RecipeCard class = 'recipe' key={idx} recipeData = {recipe} /></CardDeck>}) : ''}
       </>
     )
   }
