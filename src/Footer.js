@@ -1,10 +1,13 @@
 import React from 'react';
 
+import './Footer.css';
 
 class Footer extends React.Component {
   render () {
     return (
-      <h4> Created by Qaalid Hashi, Jona Brown, Shan Jiang, and Alexander Vogt </h4>
+      <div className="footer-container">
+      <h4 className="footer-text"> Created by Qaalid Hashi, Jona Brown, Shan Jiang, and Alexander Vogt </h4>
+      </div>
     )
   }
 }
