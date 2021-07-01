@@ -9,6 +9,7 @@ import FormPage from './FormPage';
 import Footer from './Footer';
 import Profile from './Profile';
 import AboutUs from './AboutUs';
+import HomePage from './HomePage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,16 +26,19 @@ class App extends React.Component {
   console.log(isAuthenticated);
 
   return (
-    <>
+    <div className="body">
         <Router className="body">
           <IsLoadingAndError>
             <NavbarClass auth = {isAuthenticated}/>
             <Switch>
-              <Route exact path="/"> 
+              <Route exact path="/">
+                <HomePage/>
+              </Route>
+              <Route exact path="/form"> 
               {isAuthenticated ?
               <FormPage />
                 :
-                '' 
+                ''
               }
               </Route >
               <Route exact path = "/profile"> 
@@ -47,7 +51,7 @@ class App extends React.Component {
           </IsLoadingAndError>
         </Router>
       <Footer />
-    </>
+    </div>
   )
   }
 }
