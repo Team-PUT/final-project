@@ -26,6 +26,7 @@ class NavBarClass extends React.Component {
         />{' '}
       </Navbar.Brand>
         <Link to="/">Home</Link>
+        <Link to="/form">Find Recipes</Link>
         {this.props.auth ? 
           <>
           <Link to="/profile" className="profile-link">Profile</Link> 
