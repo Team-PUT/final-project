@@ -14,3 +14,9 @@
 .cardButton {
     display: relative;
 }
+
+.cardTitle {
+    /* width: 15em;
+    max-height: 4em; */
+    display: relative;
+}
