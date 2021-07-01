@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import NavbarClass from './NavbarClass';
 import CardGroup from 'react-bootstrap/CardGroup';
 
 import jonaImg from './picture/jonaImg.jpg';
@@ -12,7 +11,6 @@ class AboutUs extends React.Component {
   render () {
     return (
       <>
-        <NavbarClass/>
       <CardGroup>
         <Card style={{ width: '18rem' }} className="card">
           <Card.Img variant="top" src={qImg} />

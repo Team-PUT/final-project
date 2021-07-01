@@ -7,6 +7,9 @@ import { withAuth0 } from '@auth0/auth0-react';
 import NavbarClass from './NavbarClass';
 import FormPage from './FormPage';
 import Footer from './Footer';
+import Profile from './Profile';
+import AboutUs from './AboutUs';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
@@ -17,6 +20,10 @@ import {
 
 class App extends React.Component {
   render() {
+  //we are importing these props from Auth0
+  const { isAuthenticated }= this.props.auth0;
+  console.log(isAuthenticated);
+
   return (
     <>
         <Router className="body">
@@ -34,6 +41,7 @@ class App extends React.Component {
                 <Profile/>
               </Route>
               <Route exact path = "/aboutUs">
+                <AboutUs/>
               </Route>
             </Switch>
           </IsLoadingAndError>
@@ -44,4 +52,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth0(App);
