@@ -3,6 +3,10 @@ import Card from 'react-bootstrap/Card';
 import NavbarClass from './NavbarClass';
 import CardGroup from 'react-bootstrap/CardGroup';
 
+import jonaImg from './picture/jonaImg.jpg';
+import shanImg from './picture/shanImg.jpg';
+import alexImg from './picture/alexImg.jpeg';
+import qImg from './picture/qImg.jpg';
 
 class AboutUs extends React.Component {
   render () {
@@ -10,8 +14,8 @@ class AboutUs extends React.Component {
       <>
         <NavbarClass/>
       <CardGroup>
-        <Card style={{ width: '18rem' }} variant="dark">
-          <Card.Img variant="top" src="" />
+        <Card style={{ width: '18rem' }} className="card">
+          <Card.Img variant="top" src={qImg} />
           <Card.Body>
             <Card.Title>Qaalid Hashi</Card.Title>
             <Card.Text>
@@ -21,8 +25,8 @@ class AboutUs extends React.Component {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="./picture/jonaImg.jpg"/>
+        <Card style={{ width: '18rem' }} className="card">
+          <Card.Img variant="top" src={jonaImg}/>
           <Card.Body>
             <Card.Title>Jona Brown</Card.Title>
             <Card.Text>
@@ -32,8 +36,8 @@ class AboutUs extends React.Component {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={{ width: '18rem' }} className="card">
+          <Card.Img variant="top" src={alexImg}/>
           <Card.Body>
             <Card.Title>Alex Vogt</Card.Title>
             <Card.Text>
@@ -43,8 +47,8 @@ class AboutUs extends React.Component {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="./picture/shanImg.jpg" />
+        <Card style={{ width: '18rem' }} className="card">
+          <Card.Img variant="top" src={shanImg} />
           <Card.Body>
             <Card.Title>Shan Jiang</Card.Title>
             <Card.Text>
