@@ -1,25 +1,33 @@
-.form{
-  margin-left: 20em;
-  margin-right:0em;
-  max-width: 20em;
-}
+.form {
+  width: 100%;
+  margin-left: 0em;
+  margin-right: 0em;
 
 .cardDeck {
   /* border: red 5px solid; */
   display: inline-flex;
   /* max-width: 3em; */
-  max-height: 480px;
+  max-height: 500px;
   max-width: 50%;
+  padding: 2px;
 }
 
-/* .toastheader {
-  width: 9%;
+/* .toastHeader {
+  border: blue 5px solid;
 } */
 
 .toast {
-  width: 10%;
+  width:30%;
+  flex-wrap: wrap;
+  
 }
 
+.toastP {
+  width: 20%;
+  margin-left: 5em;
+  margin-right: 0em;
+
+}
 .results {
   max-height: 60em;
   max-width: 59em;
