@@ -4,7 +4,7 @@ import './App.css';
 import IsLoadingAndError from './IsLoadingAndError';
 import { withAuth0 } from '@auth0/auth0-react';
 
-import NavbarClass from './NavbarClass';
+import NavbarClass from './NavBarClass';
 import FormPage from './FormPage';
 import Footer from './Footer';
 import Profile from './Profile';
