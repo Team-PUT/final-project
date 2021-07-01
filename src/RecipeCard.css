@@ -1,0 +1,16 @@
+.card-image {
+    /* height: 100 px;
+    width: 100 px; */
+    height: 10em;
+    width: 10em;
+}
+
+.card {
+    height: 20em;
+    width: 19em;
+    margin: 5px;
+}
+
+.cardButton {
+    display: relative;
+}

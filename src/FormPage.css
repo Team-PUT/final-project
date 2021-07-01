@@ -1,13 +1,29 @@
-
+.form{
+  margin-left: 20em;
+  margin-right:0em;
+  max-width: 20em;
+  display: inline;
+}
 
 .cardDeck {
   /* border: red 5px solid; */
   display: inline-flex;
   /* max-width: 3em; */
   max-height: 480px;
+  max-width: 50%;
 }
 
-.recipe {
-  /* flex: 1; */
-  max-width: 3em;
+/* .toastheader {
+  width: 9%;
+} */
+
+.toast {
+  width: 10%;
+}
+
+.results {
+  max-height: 60em;
+  max-width: 59em;
+  margin-left: 5em;
+  margin-right: 5em;
 }
