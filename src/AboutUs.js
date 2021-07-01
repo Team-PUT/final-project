@@ -1,10 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import AboutUsCss from './AboutUs.css'
 
 import jonaImg from './picture/jonaImg.jpg';
 import shanImg from './picture/shanImg.jpg';
-import alexImg from './picture/alexImg.jpeg';
+import alexImg from './picture/alexImg.jpg';
 import qImg from './picture/qImg.jpg';
 
 class AboutUs extends React.Component {
