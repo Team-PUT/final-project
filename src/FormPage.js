@@ -86,12 +86,11 @@ class FormPage extends React.Component {
                     <Form.Label>Spices</Form.Label>
                     <Form.Control type="string" placeholder="Enter Spice"/>
                   </Form.Group>
-
-                  <Button variant="primary" type="submit" >Submit</Button>
-                  {this.state.ingredients.length > 0 ? <Button className= 'recipeButton' onClick={this.handleGetRecipes} ><Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
-      aria-hidden="true" />Get Recipes!<Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
-      aria-hidden="true" /></Button> : ''}
-                </Form>
+                  <Button variant="primary" type="submit" >Add Ingredient(s)!</Button>
+                        {this.state.ingredients.length > 0 ? <Button className= 'recipeButton' onClick={this.handleGetRecipes} ><Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
+                        aria-hidden="true" />Get Recipes!<Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
+                        aria-hidden="true" /></Button> : <Button disabled >Get Recipes!</Button>}
+                  </Form>
               </Col> 
               <Col className = 'toastCol'>
                 {this.state.ingredients ? this.state.ingredients.map((item, idx) => {
