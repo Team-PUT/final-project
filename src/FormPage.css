@@ -13,15 +13,9 @@
 }
 
 .cardDeck {
-  border: red solid 5px;
-}
-
-.results {
-  border: red solid 5px;
-  }
-
-.recipeCard {
-  border: red solid 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #015249;
 }
 
 .toast {

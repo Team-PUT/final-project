@@ -41,6 +41,8 @@ class Profile extends React.Component {
           <ListGroup.Item>Nickname: {user.nickname}</ListGroup.Item>
         </ListGroup>
       </Card>
+
+
       </div>
     )
   }

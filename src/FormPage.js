@@ -34,10 +34,8 @@ class FormPage extends React.Component {
   
   handleGetRecipes = async () => {
     let searchData = JSON.stringify(this.state.ingredients);
-    console.log(searchData);
     let recipeData = await axios.get(`${REACT_APP_PORT}/searchIngredients?ingredients=${searchData}`);
     let dataToSave = recipeData.data.slice(0,20);
-    console.log(recipeData);
     this.setState({recipes: dataToSave})
   }
   
@@ -65,7 +63,7 @@ class FormPage extends React.Component {
     return (
       <>
         <span className = 'formDiv'>
-          <Container class= "container">
+          <Container className= "container">
             <Row>
               <Col>
                 <Form className= 'form' onSubmit={this.handleSubmit}>
@@ -103,10 +101,11 @@ class FormPage extends React.Component {
             </Row>  
           </Container>
         </span>
-        <span class= 'results'>
+        <span className= 'results'>
+          <CardDeck className = 'cardDeck'>
         {this.state.recipes.length > 0 ? this.state.recipes.map((recipe, idx) => {
-          console.log(recipe);
-          return <CardDeck className = 'cardDeck'><RecipeCard className = 'recipeCard' key={idx} recipeData = {recipe} /></CardDeck>}) : ''}
+          return <RecipeCard className = 'recipeCard' key={idx} recipeData = {recipe} />}) : ''}
+          </CardDeck>
         </span>  
       </>
     )
