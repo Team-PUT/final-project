@@ -33,7 +33,8 @@ class FormPage extends React.Component {
   };
   
   handleGetRecipes = async () => {
-    let searchData = this.state.ingredients.join(' ');
+    let searchData = this.state.ingredients;
+    JSON.parse(searchData);
     console.log(searchData);
     let recipeData = await axios.get(`${REACT_APP_PORT}/searchIngredients?ingredients=${searchData}`);
     let dataToSave = recipeData.data.slice(0,20);
