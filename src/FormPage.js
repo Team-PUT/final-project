@@ -32,10 +32,8 @@ class FormPage extends React.Component {
   
   handleGetRecipes = async () => {
     let searchData = JSON.stringify(this.state.ingredients);
-    console.log(searchData);
     let recipeData = await axios.get(`${REACT_APP_PORT}/searchIngredients?ingredients=${searchData}`);
     let dataToSave = recipeData.data.slice(0,20);
-    console.log(recipeData);
     this.setState({recipes: dataToSave})
   }
   
@@ -63,7 +61,7 @@ class FormPage extends React.Component {
     return (
       <>
         <span className = 'formDiv'>
-          <Container class= "formContainer">
+          <Container className= "formContainer">
             <Row>
               <Col class= 'formCol' >
                 <Form className= 'form' onSubmit={this.handleSubmit}>
