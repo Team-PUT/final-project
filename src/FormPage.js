@@ -13,8 +13,6 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const REACT_APP_PORT = process.env.REACT_APP_PORT;
 
-
-// let updatedArray= [];
 class FormPage extends React.Component {
 
   constructor(props) {
@@ -67,7 +65,7 @@ class FormPage extends React.Component {
         <span className = 'formDiv'>
           <Container class= "container">
             <Row>
-              <Col>
+              <Col class= 'formCol' >
                 <Form className= 'form' onSubmit={this.handleSubmit}>
                   <Form.Group controlId='enterMeat'>
                     <Form.Label>Meat</Form.Label>
