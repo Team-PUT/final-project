@@ -15,7 +15,7 @@ class RecipeCard extends React.Component {
                     <Card.Title className = 'cardTitle'>{this.props.recipeData.name}</Card.Title>
                     {/* <Card.Text>
                         {this.props.recipeData.source}
-                    </Card.Text> */}
+                    </Card.Text> */}  
                         <Button class = 'cardButton' variant="primary" href={this.props.recipeData.link}>Check out this recipe!</Button>
                         <Button class = 'cardButton' variant='info'>Save!</Button>
                 </Card.Body>

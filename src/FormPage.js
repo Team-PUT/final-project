@@ -65,7 +65,7 @@ class FormPage extends React.Component {
     return (
       <>
         <span className = 'formDiv'>
-          <Container class= "container">
+          <Container class= "formContainer">
             <Row>
               <Col>
                 <Form className= 'form' onSubmit={this.handleSubmit}>
@@ -103,11 +103,11 @@ class FormPage extends React.Component {
             </Row>  
           </Container>
         </span>
-        <span class= 'results'>
+        <div class= 'results'>
         {this.state.recipes.length > 0 ? this.state.recipes.map((recipe, idx) => {
           console.log(recipe);
           return <CardDeck className = 'cardDeck'><RecipeCard className = 'recipeCard' key={idx} recipeData = {recipe} /></CardDeck>}) : ''}
-        </span>  
+        </div>  
       </>
     )
   }

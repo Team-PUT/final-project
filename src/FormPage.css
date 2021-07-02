@@ -8,24 +8,29 @@
   margin-left: 1em;
 }
 
-.container{
+.formContainer{
   margin-left: 1em;
 }
 
 .cardDeck {
-  border: red solid 5px;
+  max-width: 20em;
 }
 
 .results {
-  border: red solid 5px;
-  }
+  width: 85vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
 
 .recipeCard {
-  border: red solid 5px;
+  margin-right: 5px;
+  background-color: white;
 }
 
 .toast {
-  width:30%;
+  width:30%;  
   flex-wrap: wrap;
 }
 
@@ -33,7 +38,6 @@
   width: 20%;
   margin-left: 5em;
   margin-right: 0em;
-
 }
 
 .toastCol{
