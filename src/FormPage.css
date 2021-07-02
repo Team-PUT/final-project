@@ -1,11 +1,17 @@
 .form {
+  
+}
+
+.formdiv{
+  margin-left: 1em;
+  border: red solid 5px;
   width: 100%;
   margin-left: 0em;
   margin-right: 0em;
 }
 
-.formdiv{
-  margin-left: 1em;
+.formCol {
+  border: red solid 5px;
 }
 
 .container{
