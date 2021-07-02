@@ -2,6 +2,9 @@
   width: 100%;
   margin-left: 0em;
   margin-right: 0em;
+  /* border: black solid 5px; */
+  box-shadow: grey 2px 2px;
+  border-style: dashed;
 }
 
 .formdiv{
@@ -14,6 +17,8 @@
 
 .cardDeck {
   max-width: 20em;
+  /* border: purple solid 5px; */
+  border: gray 2px solid;
 }
 
 .results {
@@ -22,11 +27,15 @@
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 10px;
+  /* border: red solid 5px; */
+  margin-left: 15em;
+  margin-right: 0em;
 }
 
 .recipeCard {
   margin-right: 5px;
   background-color: white;
+  
 }
 
 .toast {
