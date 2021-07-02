@@ -1,0 +1,22 @@
+.card-image {
+    /* height: 100 px;
+    width: 100 px; */
+    height: 10em;
+    width: 100%;
+}
+
+.card {
+    margin-left: 15rem;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.cardButton {
+    display: relative;
+}
+
+.cardTitle {
+    /* width: 15em;
+    max-height: 4em; */
+    display: relative;
+}
+

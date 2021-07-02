@@ -50,15 +50,15 @@ class RecipeCard extends React.Component {
   render() {
     let newArr = this.createMatchArr();
         return (
-            <Card class = 'card'>
-                <Card.Img class = 'card-image' variant="top" src={this.props.recipeData.image} />
+            <Card bg="dark">
+                <Card.Img className='card-image' variant="top" src={this.props.recipeData.image} />
                 <Card.Body>
-                    <Card.Title className = 'cardTitle'>{this.props.recipeData.name}</Card.Title>
+                    <Card.Title className='cardTitle'>{this.props.recipeData.name}</Card.Title>
                       <Card.Text>{`Ingredient Matches: ${this.props.recipeData.matches}`}</Card.Text>
                       <Card.Text>Matches From Search: {newArr}</Card.Text>
                      <Card.Text>{`Source: ${this.props.recipeData.source}`}</Card.Text>
-                        <Button class = 'cardButton' href={this.props.recipeData.link} target="blank">Check out this recipe!</Button>
-                        <Button class = 'cardButton' onClick={() => this.saveRecipe(this.props.recipeData._id)}>Save!</Button>
+                        <Button className='cardButton' variant="success" href={this.props.recipeData.link} target="blank">Check out this recipe!</Button>
+                        <Button className='cardButton' variant="warning" onClick={() => this.saveRecipe(this.props.recipeData._id)}>Save!</Button>
                 </Card.Body>
             </Card>
         )

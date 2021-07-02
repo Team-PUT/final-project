@@ -1,13 +1,14 @@
 .card-img-top {
-    margin: 5% 5% 5% 5%;
+    margin: 5%;
     max-width: 90%;
 }
 
-.card {
+.about-us-card {
     border: solid gray 3px;
     height: inherit;
     margin-top: 5rem;
-    background-color: #D7CEC7;
+    margin-left: 25rem;
+    margin-right: 8rem;
 }
 
 .card-title{
@@ -15,7 +16,8 @@
     font-size: 2em;
 }
 
-.card-deck {
-  width: 75vw;
-  right: 0;
+.card-body, .card-title, .card-text {
+  background-color: inherit;
+  color: #C09F80;
 }
+

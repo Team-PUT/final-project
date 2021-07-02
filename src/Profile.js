@@ -97,7 +97,13 @@ class Profile extends React.Component {
           <ListGroup.Item>Nickname: {user.nickname}</ListGroup.Item>
         </ListGroup>
       </Card>
-        <div class= 'results'>
+      <div className="header-container">
+      {this.state.savedRecipes.length > 0 ? 
+        <h1 className="saved-recipes">Saved Recipes</h1> :
+        <h1 classname="saved-recipes">No Saved Recipes Yet</h1>
+      }
+      </div>
+        <div className='results'>
         {this.state.savedRecipes.length > 0 ? this.state.savedRecipes.map((recipe, idx) => {
           return <CardDeck className = 'cardDeck'><ProfileCard className='profile-card' key={idx} recipeData={recipe} deleteRecipe={this.deleteRecipe} /></CardDeck>}) : ''}
         </div>  
