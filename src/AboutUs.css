@@ -6,11 +6,16 @@
 .card {
     border: solid gray 3px;
     height: inherit;
-    margin-top: 2%;
+    margin-top: 5rem;
     background-color: #D7CEC7;
 }
 
 .card-title{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2em;
+}
+
+.card-deck {
+  width: 75vw;
+  right: 0;
 }

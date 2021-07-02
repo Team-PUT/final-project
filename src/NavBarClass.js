@@ -26,15 +26,15 @@ class NavBarClass extends React.Component {
                 className="d-inline-block align-top"
               />{' '}
             </Navbar.Brand>
-            <Link to="/">Home</Link>
-            {isAuthenticated ? <Link to="/form">Find Recipes</Link> : <p> Please Log in to Continue!</p>}
+            <Link to="/" style={{color: '#015249'}}>Home</Link>
+            {isAuthenticated ? <Link to="/form" style={{color: '#015249'}}>Find Recipes</Link> : <p className="p"> Please Log in to Continue!</p>}
             {this.props.auth ? 
               <>
-              {isAuthenticated ? <Link to="/profile" className="profile-link">Profile</Link> : ''}
+              {isAuthenticated ? <Link to="/profile" style={{color: '#015249'}}>Profile</Link> : ''}
               <LogoutButton />
               </>
               : <Login/>}
-            <Link to="/aboutUs" className="about-us-link">About Us</Link>
+            <Link to="/aboutUs" style={{color: '#015249'}}>About Us</Link>
           </Container>
         </Navbar>
       </>

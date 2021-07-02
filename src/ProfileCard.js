@@ -1,51 +1,21 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import './RecipeCard.css';
+import './ProfileCard.css';
 
 import { withAuth0 } from '@auth0/auth0-react';
 
-import axios from 'axios';
-
-
-class RecipeCard extends React.Component {
+class ProfileCard extends React.Component {
 
   createMatchArr = () => {
     let newArr = [];
     this.props.recipeData.matchArray.forEach(ingr => {
       if (newArr.includes(ingr) === false) {
-        console.log(`${ingr} pushed.`)
         newArr.push(ingr);
       }
     });
     return newArr.join(', ');
   };
-
- getConfig = async() => {
-    const { getIdTokenClaims } = this.props.auth0;
-    let tokenClaims = await getIdTokenClaims();
-    const jwt = tokenClaims.__raw;
-
-    const config = {
-      headers: {"Authorization" : `Bearer ${jwt}`}
-    };
-    return config;
-  }
-
-  saveRecipe = async(id) => {
-    try {
-    let config = await this.getConfig();
-    console.log(id);
-    let url = process.env.REACT_APP_PORT;
-    let response = await axios.put(`${url}/update/${id}`, config);
-
-    alert(`${this.props.recipeData.name} was saved!`);
-      console.log(response.data);
-    }
-    catch(e) {
-      console.log(e.message);
-    }
-  }
 
   render() {
     let newArr = this.createMatchArr();
@@ -58,11 +28,11 @@ class RecipeCard extends React.Component {
                       <Card.Text>Matches From Search: {newArr}</Card.Text>
                      <Card.Text>{`Source: ${this.props.recipeData.source}`}</Card.Text>
                         <Button class = 'cardButton' href={this.props.recipeData.link} target="blank">Check out this recipe!</Button>
-                        <Button class = 'cardButton' onClick={() => this.saveRecipe(this.props.recipeData._id)}>Save!</Button>
+                        <Button class = 'cardButton' onClick={() => this.props.deleteRecipe(this.props.recipeData._id)}>Delete!</Button>
                 </Card.Body>
             </Card>
         )
     }
 }
 
-export default withAuth0(RecipeCard);
+export default withAuth0(ProfileCard);

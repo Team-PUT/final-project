@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './AboutUs.css';
-import CardDeck from 'react-bootstrap/CardDeck'
-
 import jonaImg from './picture/jonaImg.jpg';
 import shanImg from './picture/shanImg.jpg';
 import alexImg from './picture/alexImg.jpg';
@@ -12,13 +10,13 @@ class AboutUs extends React.Component {
   render () {
     return (
       <>
-      <CardDeck>
+      <div className="card-deck">
         <Card style={{ width: '18rem' }} className="card">
           <Card.Img variant="top" src={qImg} />
           <Card.Body>
             <Card.Title>Qaalid Hashi</Card.Title>
             <Card.Text>
-            Background as a Professional Security. Pursuing a career in Full-Stack Development. Last meal on Earth: Somali Rice and Chicken with Anjero.
+            Background in Professional Security. Pursuing a career in Full-Stack Development. Last meal on Earth: Somali Rice and Chicken with Anjero.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -52,7 +50,7 @@ class AboutUs extends React.Component {
             </Card.Text>
           </Card.Body>
         </Card>
-      </CardDeck>
+      </div>
       </>
     )
   }
