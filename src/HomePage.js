@@ -1,5 +1,5 @@
 import React from 'react';
-// import HomePage from './HomePage.css';
+// import './HomePage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class HomePage extends React.Component {

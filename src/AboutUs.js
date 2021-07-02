@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import './AboutUs.css';
+import CardDeck from 'react-bootstrap/CardDeck'
 
 import jonaImg from './picture/jonaImg.jpg';
 import shanImg from './picture/shanImg.jpg';
@@ -11,14 +12,13 @@ class AboutUs extends React.Component {
   render () {
     return (
       <>
-      <CardGroup>
+      <CardDeck>
         <Card style={{ width: '18rem' }} className="card">
           <Card.Img variant="top" src={qImg} />
           <Card.Body>
             <Card.Title>Qaalid Hashi</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+            Background as a Professional Security. Pursuing a career in Full-Stack Development. Last meal on Earth: Somali Rice and Chicken with Anjero.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -28,8 +28,7 @@ class AboutUs extends React.Component {
           <Card.Body>
             <Card.Title>Jona Brown</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+            Background in Finance and Music, studied at Berklee College of Music in Boston, MA. Pursuing ASP.Net 401. Last meal on earth: Paella Valenciana.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -39,8 +38,7 @@ class AboutUs extends React.Component {
           <Card.Body>
             <Card.Title>Alex Vogt</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
+            Background in Nuclear/Mechanical Engineering. 6 years spent in Nuclear Navy onboard USS Olympia. Pursuing engaging career in front-end development. Last meal on Earth: Loaded Baked Potato from Al's located in Birmingham, AL.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -50,11 +48,11 @@ class AboutUs extends React.Component {
           <Card.Body>
             <Card.Title>Shan Jiang</Card.Title>
             <Card.Text>
-              Hi my name is Shan. Do you want some noodle? 
+            Background in Army Logistics Specialty. Pursuing career in Full-Stack Development. Last meal on Earth: Hot pot.
             </Card.Text>
           </Card.Body>
         </Card>
-      </CardGroup>
+      </CardDeck>
       </>
     )
   }
