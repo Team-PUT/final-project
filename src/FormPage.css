@@ -2,24 +2,43 @@
   width: 100%;
   margin-left: 0em;
   margin-right: 0em;
+  /* border: black solid 5px; */
+  box-shadow: grey 2px 2px;
+  border-style: dashed;
 }
 
 .formdiv{
   margin-left: 1em;
 }
 
-.container{
+.formContainer{
   margin-left: 1em;
 }
 
 .cardDeck {
+  max-width: 20em;
+  /* border: purple solid 5px; */
+  border: gray 2px solid;
+}
+
+.results {
+  width: 85vw;
   display: flex;
-  flex-direction: column;
-  background-color: #015249;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 10px;
+  /* border: red solid 5px; */
+  margin-left: 15em;
+  margin-right: 0em;
+}
+
+.recipeCard {
+  margin-right: 5px;
+  background-color: white;
 }
 
 .toast {
-  width:30%;
+  width:30%;  
   flex-wrap: wrap;
 }
 
@@ -27,7 +46,6 @@
   width: 20%;
   margin-left: 5em;
   margin-right: 0em;
-
 }
 
 .toastCol{

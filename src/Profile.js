@@ -6,6 +6,7 @@ import axios from 'axios';
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import './Profile.css';
 
 class Profile extends React.Component {
 
@@ -30,7 +31,7 @@ class Profile extends React.Component {
     const {user} = this.props.auth0;
     return (
       <div className="card-container">
-      <Card style={{width: '20rem'}} className="card">
+      <Card style={{width: '20rem'}} className="profileCard">
         <Card.Img variant="top" src={user.picture}/>  
         <Card.Body>
           <Card.Title>User Profile</Card.Title>

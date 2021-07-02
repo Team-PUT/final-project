@@ -13,8 +13,6 @@ import Spinner from 'react-bootstrap/Spinner';
 
 const REACT_APP_PORT = process.env.REACT_APP_PORT;
 
-
-// let updatedArray= [];
 class FormPage extends React.Component {
 
   constructor(props) {
@@ -63,9 +61,9 @@ class FormPage extends React.Component {
     return (
       <>
         <span className = 'formDiv'>
-          <Container className= "container">
+          <Container className= "formContainer">
             <Row>
-              <Col>
+              <Col class= 'formCol' >
                 <Form className= 'form' onSubmit={this.handleSubmit}>
                   <Form.Group controlId='enterMeat'>
                     <Form.Label>Meat</Form.Label>
@@ -86,12 +84,11 @@ class FormPage extends React.Component {
                     <Form.Label>Spices</Form.Label>
                     <Form.Control type="string" placeholder="Enter Spice"/>
                   </Form.Group>
-
-                  <Button variant="primary" type="submit" >Submit</Button>
-                  {this.state.ingredients.length > 0 ? <Button className= 'recipeButton' onClick={this.handleGetRecipes} ><Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
-      aria-hidden="true" />Get Recipes!<Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
-      aria-hidden="true" /></Button> : ''}
-                </Form>
+                  <Button variant="primary" type="submit" >Add Ingredient(s)!</Button>
+                        {this.state.ingredients.length > 0 ? <Button className= 'recipeButton' onClick={this.handleGetRecipes} ><Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
+                        aria-hidden="true" />Get Recipes!<Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
+                        aria-hidden="true" /></Button> : <Button disabled >Get Recipes!</Button>}
+                  </Form>
               </Col> 
               <Col className = 'toastCol'>
                 {this.state.ingredients ? this.state.ingredients.map((item, idx) => {
@@ -101,12 +98,11 @@ class FormPage extends React.Component {
             </Row>  
           </Container>
         </span>
-        <span className= 'results'>
-          <CardDeck className = 'cardDeck'>
+        <div class= 'results'>
         {this.state.recipes.length > 0 ? this.state.recipes.map((recipe, idx) => {
-          return <RecipeCard className = 'recipeCard' key={idx} recipeData = {recipe} />}) : ''}
-          </CardDeck>
-        </span>  
+          console.log(recipe);
+          return <CardDeck className = 'cardDeck'><RecipeCard className = 'recipeCard' key={idx} recipeData = {recipe} /></CardDeck>}) : ''}
+        </div>  
       </>
     )
   }
