@@ -3,24 +3,21 @@
   border-radius: 50%;
 }
 
-.navbar-container {
-  width: 10em;
+#navbar-container {
   height: 100vh;
   float: left;
   position: fixed;
-  margin-top: 0px;
-  z-index: 100;
 }
 
 .navbar {
   background-color: #F8F9FA;
-  display: flex;
   flex-direction: column;
   height: 100vh;
-  position: fixed;
+  width: 10em;
+  float: left;
 }
 
 .brand-name {
   background-color: #F8F9FA;
+  padding-left: 10px;
 }
-
