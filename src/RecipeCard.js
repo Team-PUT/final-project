@@ -9,6 +9,12 @@ import axios from 'axios';
 
 
 class RecipeCard extends React.Component {
+    constructor(props){
+        super(props);
+        this.state= {
+            showSaved: false
+        }
+    }
 
   createMatchArr = () => {
     let newArr = [];
@@ -38,7 +44,7 @@ class RecipeCard extends React.Component {
     console.log(id);
     let url = process.env.REACT_APP_PORT;
     let response = await axios.put(`${url}/update/${id}`, config);
-
+    this.setState({showSaved: true});
     alert(`${this.props.recipeData.name} was saved!`);
       console.log(response.data);
     }
@@ -58,7 +64,7 @@ class RecipeCard extends React.Component {
                       <Card.Text>Matches From Search: {newArr}</Card.Text>
                      <Card.Text>{`Source: ${this.props.recipeData.source}`}</Card.Text>
                         <Button className='cardButton' variant="success" href={this.props.recipeData.link} target="blank">Check out this recipe!</Button>
-                        <Button className='cardButton' variant="warning" onClick={() => this.saveRecipe(this.props.recipeData._id)}>Save!</Button>
+                        {this.state.showSaved ? <Button variant= "secondary" className='cardButton' disabled>Saved!</Button>:<Button className='cardButton' variant="warning" onClick={() => this.saveRecipe(this.props.recipeData._id)}>Save!</Button>}
                 </Card.Body>
             </Card>
         )
