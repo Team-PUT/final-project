@@ -14,7 +14,7 @@ class NavBarClass extends React.Component {
   render () {
     return (
       <>
-      <Navbar collapseOnSelect expand="lg" className ="navbar-container" bg="light" variant="light">
+      <Navbar collapseOnSelect className ="navbar-container">
       <Container className="navbar">
       <Navbar.Brand className="brand-name">
         <img
