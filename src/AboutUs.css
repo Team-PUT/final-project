@@ -3,12 +3,16 @@
     max-width: 90%;
 }
 
+#group {
+    max-width: 90vw;
+}
+
 .about-us-card {
     border: solid gray 3px;
     height: inherit;
     margin-top: 5rem;
-    margin-left: 25rem;
-    margin-right: 8rem;
+    margin-left: 15rem;
+    margin-right: 0.5rem;
 }
 
 .card-title{
