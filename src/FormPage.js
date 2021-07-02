@@ -9,10 +9,12 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col'
 import './FormPage.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 const REACT_APP_PORT = process.env.REACT_APP_PORT;
 
 
+// let updatedArray= [];
 class FormPage extends React.Component {
 
   constructor(props) {
@@ -22,40 +24,48 @@ class FormPage extends React.Component {
       recipes: [],
     }
   }
-
-toggleShow = ((i) => {
-  let updatedArr = this.state.ingredients.filter((item,idx) => {
-  return idx !== i;
-}); this.setState({ingredients: updatedArr});
-});
-
-handleGetRecipes = async () => {
-  let searchData = this.state.ingredients.join(' ');
-  console.log(searchData);
-  let recipeData = await axios.get(`${REACT_APP_PORT}/searchIngredients?ingredients=${searchData}`);
+  
+  toggleShow = (i) => {
+    console.log(i);
+    let updatedArray = this.state.ingredients.filter((item,idx) => {
+      return idx !== i;
+    }); this.setState({ingredients: updatedArray});
+  };
+  
+  handleGetRecipes = async () => {
+    let searchData = this.state.ingredients.join(' ');
+    console.log(searchData);
+    let recipeData = await axios.get(`${REACT_APP_PORT}/searchIngredients?ingredients=${searchData}`);
     let dataToSave = recipeData.data.slice(0,20);
     console.log(recipeData);
     this.setState({recipes: dataToSave})
-}
-
+  }
+  
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state.ingredients);
+    let updatedArray = [...this.state.ingredients];
     let meat = e.target.enterMeat.value;
     let dairy = e.target.enterDairy.value;
-    let veggies = e.target.enterVeggies.value;
+    let veggies = e.target.enterVeggies.value;;
     let spices = e.target.enterSpices.value;
-    let updatedArray = [];
-    updatedArray.push(meat, dairy, veggies, spices);
+    if(meat.length > 0){
+      updatedArray.push(meat);
+    } if(dairy.length > 0){
+      updatedArray.push(dairy); 
+      } if(veggies.length > 0){
+        updatedArray.push(veggies);
+      } if (spices.length > 0){
+        updatedArray.push(spices);
+      }
     this.setState({ingredients: updatedArray});
+    e.target.reset();
   }
   render () {
-    console.log(this.state.ingredients);
-    console.log(this.state);
     return (
       <>
         <span className = 'formDiv'>
-          <Container>
+          <Container class= "container">
             <Row>
               <Col>
                 <Form className= 'form' onSubmit={this.handleSubmit}>
@@ -80,9 +90,12 @@ handleGetRecipes = async () => {
                   </Form.Group>
 
                   <Button variant="primary" type="submit" >Submit</Button>
+                  {this.state.ingredients.length > 0 ? <Button className= 'recipeButton' onClick={this.handleGetRecipes} ><Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
+      aria-hidden="true" />Get Recipes!<Spinner animation="grow" variant="danger" size="sm" as="span" role="status"
+      aria-hidden="true" /></Button> : ''}
                 </Form>
               </Col> 
-              <Col>
+              <Col className = 'toastCol'>
                 {this.state.ingredients ? this.state.ingredients.map((item, idx) => {
                   if(item.length > 0) {return <Toast className='toast' key={idx} onClose = {() => this.toggleShow(idx)}><Toast.Header className='toastHeader'>{item}</Toast.Header></Toast>}else{return ''};
                 }): ''}
@@ -91,10 +104,9 @@ handleGetRecipes = async () => {
           </Container>
         </span>
         <span class= 'results'>
-        {this.state.ingredients.length > 0 ? <Button className= 'recipeButton' onClick={this.handleGetRecipes} size= "lg" block>Get Recipes!</Button> : ''}
         {this.state.recipes.length > 0 ? this.state.recipes.map((recipe, idx) => {
           console.log(recipe);
-          return <CardDeck class = 'cardDeck'><RecipeCard class = 'recipe' key={idx} recipeData = {recipe} /></CardDeck>}) : ''}
+          return <CardDeck className = 'cardDeck'><RecipeCard className = 'recipeCard' key={idx} recipeData = {recipe} /></CardDeck>}) : ''}
         </span>  
       </>
     )

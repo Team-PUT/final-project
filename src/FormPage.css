@@ -2,24 +2,31 @@
   width: 100%;
   margin-left: 0em;
   margin-right: 0em;
-
-.cardDeck {
-  /* border: red 5px solid; */
-  display: inline-flex;
-  /* max-width: 3em; */
-  max-height: 500px;
-  max-width: 50%;
-  padding: 2px;
 }
 
-/* .toastHeader {
-  border: blue 5px solid;
-} */
+.formdiv{
+  margin-left: 1em;
+}
+
+.container{
+  margin-left: 1em;
+}
+
+.cardDeck {
+  border: red solid 5px;
+}
+
+.results {
+  border: red solid 5px;
+  }
+
+.recipeCard {
+  border: red solid 5px;
+}
 
 .toast {
   width:30%;
   flex-wrap: wrap;
-  
 }
 
 .toastP {
@@ -28,9 +35,7 @@
   margin-right: 0em;
 
 }
-.results {
-  max-height: 60em;
-  max-width: 59em;
-  margin-left: 5em;
-  margin-right: 5em;
+
+.toastCol{
+  margin-top: 1.9em;
 }
