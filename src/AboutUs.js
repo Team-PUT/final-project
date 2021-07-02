@@ -11,7 +11,7 @@ class AboutUs extends React.Component {
   render () {
     return (
       <>
-      <CardGroup>
+      <CardGroup id = 'group'>
         <Card style={{ width: '18rem' }} className="about-us-card" bg="dark">
           <Card.Img variant="top" src={qImg} />
           <Card.Body className="card-body">
