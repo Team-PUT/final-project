@@ -1,8 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 import './AboutUs.css';
-import CardDeck from 'react-bootstrap/CardDeck'
-
 import jonaImg from './picture/jonaImg.jpg';
 import shanImg from './picture/shanImg.jpg';
 import alexImg from './picture/alexImg.jpg';
@@ -12,18 +11,18 @@ class AboutUs extends React.Component {
   render () {
     return (
       <>
-      <CardDeck>
-        <Card style={{ width: '18rem' }} className="card">
+      <CardGroup>
+        <Card style={{ width: '18rem' }} className="about-us-card" bg="dark">
           <Card.Img variant="top" src={qImg} />
-          <Card.Body>
-            <Card.Title>Qaalid Hashi</Card.Title>
-            <Card.Text>
-            Background as a Professional Security. Pursuing a career in Full-Stack Development. Last meal on Earth: Somali Rice and Chicken with Anjero.
+          <Card.Body className="card-body">
+            <Card.Title className="card-title">Qaalid Hashi</Card.Title>
+            <Card.Text className="card-text">
+            Background in Professional Security. Pursuing a career in Full-Stack Development. Last meal on Earth: Somali Rice and Chicken with Anjero.
             </Card.Text>
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '18rem' }} className="card">
+        <Card style={{ width: '18rem' }} className="about-us-card" bg="dark">
           <Card.Img variant="top" src={jonaImg}/>
           <Card.Body>
             <Card.Title>Jona Brown</Card.Title>
@@ -33,7 +32,7 @@ class AboutUs extends React.Component {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '18rem' }} className="card">
+        <Card style={{ width: '18rem' }} className="about-us-card" bg="dark">
           <Card.Img variant="top" src={alexImg}/>
           <Card.Body>
             <Card.Title>Alex Vogt</Card.Title>
@@ -43,7 +42,7 @@ class AboutUs extends React.Component {
           </Card.Body>
         </Card>
 
-        <Card style={{ width: '18rem' }} className="card">
+        <Card style={{ width: '18rem' }} className="about-us-card" bg="dark">
           <Card.Img variant="top" src={shanImg} />
           <Card.Body>
             <Card.Title>Shan Jiang</Card.Title>
@@ -52,7 +51,7 @@ class AboutUs extends React.Component {
             </Card.Text>
           </Card.Body>
         </Card>
-      </CardDeck>
+      </CardGroup>
       </>
     )
   }

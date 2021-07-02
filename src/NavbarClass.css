@@ -4,20 +4,26 @@
 }
 
 #navbar-container {
-  height: 100vh;
-  float: left;
+  height: 100%;
   position: fixed;
 }
 
 .navbar {
-  background-color: #F8F9FA;
+  background-color: #C09F80;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 10em;
-  float: left;
+  top: 0;
+
 }
 
 .brand-name {
-  background-color: #F8F9FA;
+  background-color: #C09F80;
   padding-left: 10px;
 }
+
+.p {
+  color: #015249;
+  background-color: #C09f80;
+}
+

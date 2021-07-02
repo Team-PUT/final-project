@@ -1,24 +1,30 @@
 .form {
   width: 100%;
-  margin-left: 0em;
-  margin-right: 0em;
+  padding: 2rem;
   /* border: black solid 5px; */
-  box-shadow: grey 2px 2px;
-  border-style: dashed;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  background-color: #015249;
+  border-radius: 10px;
 }
 
-.formdiv{
-  margin-left: 1em;
+.formdiv {
+  margin-left: 2em;
 }
 
-.formContainer{
-  margin-left: 1em;
+.formContainer {
+  margin-left: 1rem;
+  margin-top: 5rem;
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
 }
 
 .cardDeck {
   max-width: 20em;
   /* border: purple solid 5px; */
-  border: gray 2px solid;
 }
 
 .results {
@@ -27,7 +33,7 @@
   flex-flow: row wrap;
   justify-content: space-around;
   gap: 10px;
-  /* border: red solid 5px; */
+  margin-top: 5rem;
   margin-left: 15em;
   margin-right: 0em;
 }

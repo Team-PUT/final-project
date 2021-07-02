@@ -1,7 +1,19 @@
-
-
 .card-container {
-  border: solid 1px;
-  margin-left: 8vw;
-  max-width: 1px;
+  margin-top: 3rem;
 }
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 10rem;
+}
+
+.saved-recipes {
+  font-size: 50px;
+  color: #015249;
+}
+
+
+
+  
