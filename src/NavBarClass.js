@@ -27,7 +27,7 @@ class NavBarClass extends React.Component {
               />{' '}
             </Navbar.Brand>
             <Link to="/" style={{color: '#015249'}}>Home</Link>
-            {isAuthenticated ? <Link to="/form" style={{color: '#015249'}}>Find Recipes</Link> : <p className="p"> Please Log in to Continue!</p>}
+            {isAuthenticated ? <Link to="/form" style={{color: '#015249'}}>Find Recipes</Link> : ''}
             {this.props.auth ? 
               <>
               {isAuthenticated ? <Link to="/profile" style={{color: '#015249'}}>Profile</Link> : ''}

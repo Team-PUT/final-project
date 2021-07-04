@@ -6,7 +6,7 @@ class Footer extends React.Component {
   render () {
     return (
       <div className="footer-container">
-      <h4 className="footer-text"> Created by Qaalid Hashi, Jona Brown, Shan Jiang, and Alexander Vogt </h4>
+      <h4 className="footer-text"> Open source project under MIT License</h4>
       </div>
     )
   }
