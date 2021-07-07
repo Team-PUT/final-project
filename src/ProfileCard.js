@@ -9,6 +9,7 @@ class ProfileCard extends React.Component {
 
   createMatchArr = () => {
     let newArr = [];
+    // sad that you have to do this de-duping on the frontend... would make more sense to do this on the backend, as you create the array.
     this.props.recipeData.matchArray.forEach(ingr => {
       if (newArr.includes(ingr) === false) {
         newArr.push(ingr);

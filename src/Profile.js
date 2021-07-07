@@ -104,8 +104,12 @@ class Profile extends React.Component {
       }
       </div>
         <div className='results'>
-        {this.state.savedRecipes.length > 0 ? this.state.savedRecipes.map((recipe, idx) => {
-          return <CardDeck className = 'cardDeck'><ProfileCard className='profile-card' key={idx} recipeData={recipe} deleteRecipe={this.deleteRecipe} /></CardDeck>}) : ''}
+          <CardDeck className = 'cardDeck'>
+            {this.state.savedRecipes.length > 0 ? this.state.savedRecipes.map((recipe, idx) => {
+              // really odd that you have a CardDeck per recipe card, rather than a single CardDeck that contains all of the ProfileCards.
+              // Lots of custom styling that gets in the way of the basic Card styling that comes from Bootstrap.
+              return <ProfileCard className='profile-card' key={idx} recipeData={recipe} deleteRecipe={this.deleteRecipe} />}) : ''}
+          </CardDeck>
         </div>  
 
       </div>

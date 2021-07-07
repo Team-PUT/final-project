@@ -64,6 +64,7 @@ class RecipeCard extends React.Component {
                       <Card.Text>Matches From Search: {newArr}</Card.Text>
                      <Card.Text>{`Source: ${this.props.recipeData.source}`}</Card.Text>
                         <Button className='cardButton' variant="success" href={this.props.recipeData.link} target="blank">Check out this recipe!</Button>
+                        {/* This is nice, but I wish you could have combined the ProfileCard and RecipeCard by extending this conditional logic a bit further. */}
                         {this.state.showSaved ? <Button variant= "secondary" className='cardButton' disabled>Saved!</Button>:<Button className='cardButton' variant="warning" onClick={() => this.saveRecipe(this.props.recipeData._id)}>Save!</Button>}
                 </Card.Body>
             </Card>

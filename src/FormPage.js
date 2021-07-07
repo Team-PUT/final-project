@@ -65,6 +65,7 @@ class FormPage extends React.Component {
             <Row>
               <Col class= 'formCol' >
                 <Form className= 'form' onSubmit={this.handleSubmit}>
+                  {/* I still think it's weird that you suggest what types of food to enter so strongly here, rather than providing suggestions nearby and letting the user type anything they want in each box. */}
                   <Form.Group controlId='enterMeat'>
                     <Form.Label>Meat</Form.Label>
                     <Form.Control type="text" placeholder="Enter Meat"/>

@@ -1,5 +1,7 @@
 # Project Prep # 1
 
+<!-- You should really start this README with the things that are requested in the project requirements--an overview of the project, links to the deployed site and the backend repo, how to get started if you're cloning the app, etc-->
+
 # Group Members:
 - Jona Brown
 - Shan Jiang
