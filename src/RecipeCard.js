@@ -44,7 +44,11 @@ class RecipeCard extends React.Component {
     console.log(id);
     let url = process.env.REACT_APP_PORT;
     let response = await axios.put(`${url}/update/${id}`, config);
-    this.setState({showSaved: true});
+
+    if (this.setState === false ) {
+      this.setState({showSaved: true}) 
+    }
+
     alert(`${this.props.recipeData.name} was saved!`);
       console.log(response.data);
     }
