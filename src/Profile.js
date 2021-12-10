@@ -60,6 +60,7 @@ class Profile extends React.Component {
 
     // console.log(response.data); - not needed.
 
+    // Set the saved recipes to the updated array which filters out all recipes without the specified recipe id.
     let updatedArr = this.state.savedRecipes.filter(recipe => recipe._id !== id);
     this.setState({savedRecipes: updatedArr});
     }
@@ -105,8 +106,8 @@ class Profile extends React.Component {
       </Card>
       <div className="header-container">
       {this.state.savedRecipes.length > 0 ? 
-        <h1 className="saved-recipes">Saved Recipes</h1> :
-        <h1 classname="saved-recipes">No Saved Recipes Yet</h1>
+        <h1 className="saved-recipes">{this.state.savedRecipes.length} Recipes Saved.</h1> :
+        <h1 classname="saved-recipes">You Have 0 Saved recipes.</h1>
       }
       </div>
         <div className='results'>
