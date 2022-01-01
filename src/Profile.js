@@ -2,7 +2,7 @@ import React from 'react';
 import './Profile.css';
 import ProfileCard from './ProfileCard';
 
-import { withAuth0 } from '@auth0/auth0-react';
+import withAuth0 from '@auth0/auth0-react';
 import axios from 'axios';
 
 import Card from 'react-bootstrap/Card';
@@ -14,14 +14,15 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      savedRecipes: []
+      savedRecipes: [],
+      deletedRecipes: []
     }
   }
 
   //Pulling all recipes associated with the user's email address from MongoDB via axios.
   getRecipes = async() => {
     try {
-       // this is going to be the same, always, for making requests to the server including the token
+    // this is going to be the same, always, for making requests to the server including the token
     const { getIdTokenClaims } = this.props.auth0;
     let tokenClaims = await getIdTokenClaims();
     const jwt = tokenClaims.__raw;
@@ -31,6 +32,7 @@ class Profile extends React.Component {
       headers: {"Authorization" : `Bearer ${jwt}`}
     };
 
+    // Below is what connects front-end to back-end. Identify what is needed for a route within laravel/PHP and configure here within .env file.
     let url = process.env.REACT_APP_PORT;
     let getRecipes = await axios.get(`${url}/profileRecipes`, config);
     this.setState({savedRecipes: getRecipes.data });
@@ -52,11 +54,13 @@ class Profile extends React.Component {
       headers: {"Authorization" : `Bearer ${jwt}`}
     };
 
+    // Below is what connects front-end to back-end. Identify what is needed for a route within laravel/PHP and configure here within .env file.
     let url = process.env.REACT_APP_PORT;
     let response = await axios.delete(`${url}/delete/${id}`, config);
 
-    console.log(response.data);
+    // console.log(response.data); - not needed.
 
+    // Set the saved recipes to the updated array which filters out all recipes without the specified recipe id.
     let updatedArr = this.state.savedRecipes.filter(recipe => recipe._id !== id);
     this.setState({savedRecipes: updatedArr});
     }
@@ -65,7 +69,9 @@ class Profile extends React.Component {
     }
   }
 
+  // componentDidMount only occurs on the FIRST loading/login.
   async componentDidMount() {
+    // Inheriting auth0 logic from state. Ideally redux will be used for this in later stages.
     const { getIdTokenClaims } = this.props.auth0;
     let tokenClaims = await getIdTokenClaims();
     const jwt = tokenClaims.__raw;
@@ -75,6 +81,7 @@ class Profile extends React.Component {
       headers: {"Authorization" : `Bearer ${jwt}`}
     };
 
+    // Below is what connects front-end to back-end. Identify what is needed for a route within laravel/PHP and configure here within .env file.
     let url = process.env.REACT_APP_PORT;
     //Sending out a token to the front end to only get user info
     let user = await axios.get(`${url}/login`, config);
@@ -99,8 +106,8 @@ class Profile extends React.Component {
       </Card>
       <div className="header-container">
       {this.state.savedRecipes.length > 0 ? 
-        <h1 className="saved-recipes">Saved Recipes</h1> :
-        <h1 classname="saved-recipes">No Saved Recipes Yet</h1>
+        <h1 className="saved-recipes">{this.state.savedRecipes.length} Recipes Saved.</h1> :
+        <h1 classname="saved-recipes">You Have 0 Saved recipes.</h1>
       }
       </div>
         <div className='results'>

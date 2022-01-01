@@ -11,16 +11,18 @@ import axios from 'axios';
 class RecipeCard extends React.Component {
     constructor(props){
         super(props);
-        this.state= {
+        this.state = {
+          // Defining state of the class component.
             showSaved: false
         }
     }
 
   createMatchArr = () => {
     let newArr = [];
+      // Props are being passed down from the parent component, then used.
     this.props.recipeData.matchArray.forEach(ingr => {
-      if (newArr.includes(ingr) === false) {
-        console.log(`${ingr} pushed.`)
+      // If new array does not include the ingredient mentioned in recipe data, push it to the array.
+      if (!newArr.includes(ingr)) {
         newArr.push(ingr);
       }
     });
@@ -39,17 +41,24 @@ class RecipeCard extends React.Component {
   }
 
   saveRecipe = async(id) => {
+    // We will attempt to make a put request to the back end with the saved information. 
+    // If it fails, catch the error and return it to the user.
     try {
     let config = await this.getConfig();
-    console.log(id);
     let url = process.env.REACT_APP_PORT;
     let response = await axios.put(`${url}/update/${id}`, config);
-    this.setState({showSaved: true});
-    alert(`${this.props.recipeData.name} was saved!`);
-      console.log(response.data);
+
+    if (!this.setState) {
+      this.setState({showSaved: true}) 
     }
+
+    alert(`${this.props.recipeData.name} was saved!`);
+      //console.log(response.data);
+    }
+
     catch(e) {
       console.log(e.message);
+      alert(`There was an error processing your request. Please try again - error: ${e.message}`);
     }
   }
 
